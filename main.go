@@ -17,6 +17,9 @@ func main() {
 
 	// 添加子命令
 	rootCmd.AddCommand(cmd.NewSubcommand())
+	rootCmd.AddCommand(cmd.CpuCMD())
+	rootCmd.AddCommand(cmd.InfoCMD())
+	rootCmd.AddCommand(cmd.SshCMD())
 
 	// 执行根命令
 	if err := rootCmd.Execute(); err != nil {

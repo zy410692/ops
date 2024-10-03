@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/olekukonko/tablewriter"
 	"github.com/shirou/gopsutil/v3/cpu"
+	"github.com/shirou/gopsutil/v3/disk"
 	"github.com/shirou/gopsutil/v3/mem"
 	"github.com/spf13/cobra"
 	"os"
@@ -27,6 +28,12 @@ func InfoCMD() *cobra.Command {
 			m, _ := mem.VirtualMemory()
 			data = append(data, []string{"memory", fmt.Sprintf("%dG", m.Total/1024/1024/1024),
 				fmt.Sprintf("%1.f%%", m.UsedPercent)})
+			d, _ := disk.Usage("/")
+			data = append(data, []string{"disk根节点", fmt.Sprintf("%dG", d.Total/1024/1024/1024),
+				fmt.Sprintf("%1.f%%", d.UsedPercent)})
+			//d1, _ := disk.Usage("/DATA")
+			//data = append(data, []string{"disk /DATA", fmt.Sprintf("%dG", d1.Total/1024/1024/1024),
+			//	fmt.Sprintf("%1.f%%", d1.UsedPercent)})
 
 			for _, v := range data {
 				table.Append(v)
