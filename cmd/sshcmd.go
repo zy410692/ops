@@ -1,11 +1,16 @@
 package cmd
 
 import (
-	"github.com/spf13/cobra"
 	"log"
-	"main/Lib"
 	"os"
+
+	"github.com/spf13/cobra"
+	"github.com/zy410692/ops/Lib"
 )
+
+func init() {
+	rootCmd.AddCommand(SshCMD())
+}
 
 func SshCMD() *cobra.Command {
 	var sshCMD = &cobra.Command{

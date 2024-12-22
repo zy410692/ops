@@ -2,11 +2,16 @@ package cmd
 
 import (
 	"fmt"
+	"time"
+
 	"github.com/shirou/gopsutil/v3/cpu"
 	"github.com/shirou/gopsutil/v3/mem"
 	"github.com/spf13/cobra"
-	"time"
 )
+
+func init() {
+	rootCmd.AddCommand(CpuCMD())
+}
 
 func CpuCMD() *cobra.Command {
 	var subCmd = &cobra.Command{

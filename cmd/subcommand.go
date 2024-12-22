@@ -2,12 +2,18 @@ package cmd
 
 import (
 	"fmt"
+	"log"
+
+	"strconv"
+
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"log"
-	"main/Lib"
-	"strconv"
+	"github.com/zy410692/ops/Lib"
 )
+
+func init() {
+	rootCmd.AddCommand(NewSubcommand())
+}
 
 // NewSubcommand 创建一个新的子命令
 func NewSubcommand() *cobra.Command {

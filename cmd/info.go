@@ -2,14 +2,19 @@ package cmd
 
 import (
 	"fmt"
+	"os"
+	"time"
+
 	"github.com/olekukonko/tablewriter"
 	"github.com/shirou/gopsutil/v3/cpu"
 	"github.com/shirou/gopsutil/v3/disk"
 	"github.com/shirou/gopsutil/v3/mem"
 	"github.com/spf13/cobra"
-	"os"
-	"time"
 )
+
+func init() {
+	rootCmd.AddCommand(InfoCMD())
+}
 
 func InfoCMD() *cobra.Command {
 	var subCmd = &cobra.Command{
