@@ -3,16 +3,13 @@ package Lib
 import (
 	"context"
 	"fmt"
-	"github.com/minio/minio-go/v7"
 	"log"
 
+	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
 )
 
 const (
-	// endpoint        string = "172.24.112.222:9000"
-	// accessKeyID     string = "admin"
-	// secretAccessKey string = "chun18Lin"
 	useSSL bool = false
 )
 
