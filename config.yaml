@@ -1,3 +1,4 @@
+[minio]
 minio_ip : ""
 minio_user : "admin"
 minio_port : 9000

@@ -2,20 +2,18 @@
 
 ops-运维命令行工具
 
-Usage:
-  ops [flags]
-  ops [command]
+## 使用方法
 
-Available Commands:
-  completion  Generate the autocompletion script for the specified shell
-  cpu         打印cpu百分比
-  help        Help about any command
-  info        打印cpu内存百分比
-  minio       minio添加用户和鉴权
-  ssh         ssh command 
+## 可用命令
+- **completion**: 生成指定 shell 的自动补全脚本
+- **cpu**: 打印 CPU 百分比
+- **help**: 获取任何命令的帮助信息
+- **info**: 打印 CPU 和内存百分比
+- **minio**: 添加用户和鉴权到 MinIO
+- **ssh**: 执行 SSH 命令
 
-Flags:
-      --config string   配置文件路径 (default "config.yaml")
-  -h, --help            help for ops
+## 标志
+- `--config string`: 配置文件路径 (默认 "config.yaml")
+- `-h, --help`: 获取 ops 的帮助信息
 
-Use "ops [command] --help" for more information about a command.
+使用 `ops [command] --help` 获取更多关于某个命令的信息。
