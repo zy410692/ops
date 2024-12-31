@@ -12,6 +12,7 @@ import (
 )
 
 func init() {
+
 	rootCmd.AddCommand(NewSubcommand())
 }
 
@@ -35,14 +36,14 @@ func NewSubcommand() *cobra.Command {
 			}
 
 			// 获取环境变量
-			minio_url := viper.GetString("minio_ip")
-			minio_port := viper.GetInt("minio_port")
-			minio_root_user := viper.GetString("minio_user")
-			minio_password := viper.GetString("minio_password")
+			minio_url := viper.GetString("minio.minio_ip")
+			minio_port := viper.GetInt("minio.minio_port")
+			minio_root_user := viper.GetString("minio.minio_user")
+			minio_password := viper.GetString("minio.minio_password")
 
 			//获取参数
-			minio_bucket, _ := cmd.Flags().GetString("bucket")
-			minio_user, _ := cmd.Flags().GetString("user")
+			minio_bucket, _ := cmd.Flags().GetString("minio.bucket")
+			minio_user, _ := cmd.Flags().GetString("minio. suser")
 
 			if minio_url == "" {
 				panic("minio url 参数不能为空")
