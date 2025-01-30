@@ -72,7 +72,7 @@ func runHarborCommand() error {
 		return fmt.Errorf("连接 harbor 错误: %w", err)
 	}
 	defer func() {
-		// 这里可以添加关闭连接的逻辑（如果需要）
+
 	}()
 
 	ctx := context.Background()

@@ -3,3 +3,10 @@ minio_ip : ""
 minio_user : "admin"
 minio_port : 9000
 minio_password : ""
+
+
+[harbor]
+harbor_url : ""
+harbor_project_name : ""
+harbor_user : ""
+harbor_password : ""
